@@ -1,16 +1,24 @@
 {
   "name": "fast-curry",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "simple fast curry implementation",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "author": "tommyzzm",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/octo-utils/fast-curry.git"
+  },
   "keywords": [
     "curry"
   ],
+  "author": "tommyzzm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/octo-utils/fast-curry/issues"
+  },
+  "homepage": "https://github.com/octo-utils/fast-curry#readme",
   "devDependencies": {
     "benchmark": "^2.1.3",
     "chai": "^3.5.0",
