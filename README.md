@@ -8,7 +8,7 @@ simple fast curry implementation inspire by [`ramda`](https://github.com/ramda/r
 
 ## Usage
 
-```
+```javascript
 var curry = require('fast-curry');
 
 var sum = curry(function(a, b) { return a + b; });
