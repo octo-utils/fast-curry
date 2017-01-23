@@ -31,7 +31,7 @@ Results in K ops/sec.
 | Library                                                              | Create     | Lift       | Call       |
 |----------------------------------------------------------------------|------------|------------|------------|
 | fast-curry                                                           | 11,381,182 | 8,833,228  | 19,496,006 |
-| [ramda | R.curry](https://github.com/ramda/ramda)                    | 7,247,796  | 8,294,710  | 12,819,816 |
+| [ramda/R.curry](http://ramdajs.com/docs/#curry)                      | 7,247,796  | 8,294,710  | 12,819,816 |
 | [@riim/curry](https://github.com/Riim/curry)                         | 3,460,089  | 7,929,335  | 3,605,139  |
 | [curry](https://www.npmjs.com/package/curry)                         | 14,404,001 | 2,596,561  | 1,665,675  |
 | [cast-curry](https://www.npmjs.com/package/cast-curry)               | 8,831,008  | 1,127,958  | 2,498,141  |
