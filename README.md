@@ -12,7 +12,7 @@ simple fast curry implementation inspire by [`ramda`](https://github.com/ramda/r
 var curry = require('fast-curry');
 
 var sum = curry(function(a, b) { return a + b; });
-var addOne = sum(1); // or sum(curry.__, 1)
+var addOne = sum(1);
 
 console.log(addOne(2));
 // => 3
@@ -23,7 +23,9 @@ console.log(addOne(2));
 Benchmark sources can be found in the [folder](https://github.com/octo-utils/fast-curry/blob/master/benchmark/)
 
 Create - `sum = curry((a, b) => a + b)` - least important result
+
 Lift - `addOne = sum(1)`
+
 Call - `addOne(2)` - much more important result than the previous two
 
 Results in K ops/sec.
