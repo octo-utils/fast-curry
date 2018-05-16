@@ -15,6 +15,12 @@ const fjCurry = require("fj-curry").curry;
 const curryD = require("curry-d").curry;
 const ramdaCurry = require("ramda").curry;
 const fastCurry = require("../");
+const tinyCurry = fn => ((limit) => {
+    let judgeCurry = (...args) => args.length >= limit ?
+        fn.apply(null, args) :
+        (...args2) => judgeCurry.apply(null, args.concat(args2));
+    return judgeCurry
+})(fn.length)
 
 const suite = new Benchmark.Suite();
 
@@ -140,6 +146,16 @@ suite
         addOne = sum(1);
     })
     .add("ramdaCurry.call", function() {
+        res = addOne(2);
+    })
+
+    .add("tinyCurry.create", function() {
+        sum = tinyCurry(function(a, b) { return a + b; });
+    })
+    .add("tinyCurry.lift", function() {
+        addOne = sum(1);
+    })
+    .add("tinyCurry.call", function() {
         res = addOne(2);
     })
 
